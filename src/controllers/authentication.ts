@@ -25,8 +25,8 @@ export const register = async (req: express.Request, res: express.Response) => {
       username,
       authentication: {
         salt,
-        password: authentication(salt, password)
-      }
+        password: authentication(salt, password),
+      },
     });
 
     return res.status(200).json(user).end();
